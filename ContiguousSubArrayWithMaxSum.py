@@ -10,18 +10,6 @@ class Solution:
 
 		return overall
 
-	def maxSubArraySum(self, arr, size):
-		max_till_now = arr[0]
-		max_ending = 0
-		for i in range(size):
-			max_ending = max_ending + arr[i]
-			if max_ending < 0:
-				max_ending = 0
-			elif max_till_now < max_ending:
-				max_till_now = max_ending
-
-		return max_till_now
-
 
 
 
@@ -30,6 +18,7 @@ arr = [1,2,3,-2,5]
 n = len(arr)
 print(s.kadane(arr, n)) #9
 
-arr = [-1,-2,-3,-4]
+
+arr = [-2,-1]
 n = len(arr)
-print(s.kadane(arr, n), s.maxSubArraySum(arr, n))
+print(s.kadane(arr, n)) #-1
