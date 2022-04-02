@@ -3,12 +3,15 @@ class Solution:
         """
         Do not return anything, modify s in-place instead.
         """
-        start, end=0,len(s)-1
-        while start<end:
-          s[start],s[end] = s[end],s[start]
-          start+=1
-          end-=1
+        l,r = 0,len(s)-1
+        while l < r:
+            s[l], s[r] = s[r], s[l]
+            l +=1
+            r-=1
         return s
 
+
 s = Solution()
-print(s.reverseString(["h","e","l","l","o"]))
+print(s.reverseString(list('hello')))
+print(s.reverseString(list('Hannah')))
+        
